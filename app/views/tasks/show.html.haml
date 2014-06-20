@@ -1,0 +1,10 @@
+%ul
+  %li= @task.description
+  %li= @task.deadline
+
+%nav
+  %ul
+    %li= link_to 'Edit', edit_task_path
+    %li= link_to 'Delete', @task, method: :delete,
+      data: { confirm: 'Are you sure?' }
+    %li= link_to 'Home', root_path
